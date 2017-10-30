@@ -1,33 +1,24 @@
 <div class="search">
 	<input type="text" class="search__query" placeholder="See what’s happening right now on Twitter">
+
 	<button type="submit" class="search__button">
     	<span class="material-icons">search</span>
   	</button>
 </div>
 
+<% if not @tweets.empty? -%>
 <div class="tweets">
 	<h2 class="tweets__title">Tweet Results</h2>
 
 	<ul class="tweets__list">
-	  	<li class="tweet">
-	    	<i class="material-icons tweet__icon">chat</i>
-	    	<span class="tweet__message">Tweet1</span>
-	  	</li>
-	  	<li class="tweet">
-		    <i class="material-icons tweet__icon">chat</i>
-		    <span class="tweet__message">Tweet2</span>
-		</li>
-	  	<li class="tweet">
-		    <i class="material-icons tweet__icon">chat</i>
-		    <span class="tweet__message">Tweet3</span>
-	  	</li>
-	  	<li class="tweet">
-		    <i class="material-icons tweet__icon">chat</i>
-		    <span class="tweet__message">Tweet4</span>
-	  	</li>
-	  	<li class="tweet">
-		    <i class="material-icons tweet__icon">chat</i>
-		    <span class="tweet__message">Tweet5</span>
-	  	</li>
+	  	<% @tweets.each do |tweet| -%>
+		  	<a target="_blank" style="text-decoration: none;" href=<%= tweet.source %>>
+		  		<li class="tweet">
+				    <i class="material-icons tweet__icon">chat</i>
+				    <span class="tweet__message"><%= tweet.text %></span>
+		  		</li>
+		  	</a>
+		<% end -%>
 	</ul>
 </div>
+<% end -%>

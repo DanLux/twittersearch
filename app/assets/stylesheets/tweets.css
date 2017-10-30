@@ -57,9 +57,9 @@ body {
 
 .tweets {
   position: absolute;
-  top: 40%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
 }
 
 @media (min-width: 600px) {

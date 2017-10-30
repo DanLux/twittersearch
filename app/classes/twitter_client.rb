@@ -14,4 +14,8 @@ class TwitterClient
 		  config.access_token_secret = configuration['access_token_secret']
 		end
 	end
+
+	def search(query)
+		@client.search(query, result_type: "recent").take(20)
+	end
 end
