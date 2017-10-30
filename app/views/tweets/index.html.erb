@@ -6,19 +6,4 @@
   	</button>
 </div>
 
-<% if not @tweets.empty? -%>
-<div class="tweets">
-	<h2 class="tweets__title">Tweet Results</h2>
-
-	<ul class="tweets__list">
-	  	<% @tweets.each do |tweet| -%>
-		  	<a target="_blank" style="text-decoration: none;" href=<%= tweet.uri %>>
-		  		<li class="tweet">
-				    <i class="material-icons tweet__icon">chat</i>
-				    <span class="tweet__message"><%= tweet.full_text %></span>
-		  		</li>
-		  	</a>
-		<% end -%>
-	</ul>
-</div>
-<% end -%>
+<%= render "tweets" %>
