@@ -1,7 +1,7 @@
 <div class="search">
-	<input type="text" class="search__query" placeholder="See what’s happening right now on Twitter">
+	<input type="text" id="search-query" class="search__query" placeholder="See what’s happening right now on Twitter">
 
-	<button type="submit" class="search__button">
+	<button type="submit" id="search-button" class="search__button">
     	<span class="material-icons">search</span>
   	</button>
 </div>
@@ -12,10 +12,10 @@
 
 	<ul class="tweets__list">
 	  	<% @tweets.each do |tweet| -%>
-		  	<a target="_blank" style="text-decoration: none;" href=<%= tweet.source %>>
+		  	<a target="_blank" style="text-decoration: none;" href=<%= tweet.uri %>>
 		  		<li class="tweet">
 				    <i class="material-icons tweet__icon">chat</i>
-				    <span class="tweet__message"><%= tweet.text %></span>
+				    <span class="tweet__message"><%= tweet.full_text %></span>
 		  		</li>
 		  	</a>
 		<% end -%>

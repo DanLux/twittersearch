@@ -1,5 +1,9 @@
 class TweetsController < ApplicationController
 	def index
-		@client = TwitterClient.new
+		@tweets = []
+	end
+
+	def search
+		@tweets = TwitterClient.instance.search params[:query]
 	end
 end

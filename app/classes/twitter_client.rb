@@ -1,7 +1,10 @@
 
 require 'twitter'
+require 'singleton'
 
 class TwitterClient
+	include Singleton
+
 	@@credentials_path = Rails.root.join('config/twitter_credentials.yml')
 
 	def initialize
