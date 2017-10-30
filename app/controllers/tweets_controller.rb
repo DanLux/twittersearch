@@ -5,5 +5,6 @@ class TweetsController < ApplicationController
 
 	def search
 		@tweets = TwitterClient.instance.search params[:query]
+		render "index"
 	end
 end
