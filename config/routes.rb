@@ -54,8 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  get 'tweets/' => 'tweets#index'
-  get 'tweets/:query' => 'tweets#search'
+  get 'tweets/(:query)' => 'tweets#index'
 
   root "tweets#index"
 end

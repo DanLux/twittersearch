@@ -1,11 +1,7 @@
 
 class TweetsController < ApplicationController
 	def index
-		@tweets = []
-	end
-
-	def search
-		@tweets = TwitterClient.instance.search params[:query]
+		@tweets = params[:query] ? TwitterClient.instance.search(params[:query]) : []
 
 		respond_to do |format|
 	        format.html { render :action => "index" }
