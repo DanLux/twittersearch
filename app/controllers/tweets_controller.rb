@@ -1,3 +1,4 @@
+
 class TweetsController < ApplicationController
 	def index
 		@tweets = []
@@ -5,6 +6,10 @@ class TweetsController < ApplicationController
 
 	def search
 		@tweets = TwitterClient.instance.search params[:query]
-		render "index"
+
+		respond_to do |format|
+	        format.html { render :action => "index" }
+	        format.js { render :action => "refresh_results" }
+	    end
 	end
 end

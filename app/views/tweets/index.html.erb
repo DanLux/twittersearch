@@ -7,4 +7,6 @@
   	</button>
 </div>
 
-<%= render "tweets", tweets: @tweets %>
+<div id="dynamic_partial">
+	<%= render(:partial => "tweets", :locals => { :tweets => @tweets }) %>
+</div>

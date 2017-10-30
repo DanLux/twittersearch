@@ -19,6 +19,6 @@ class TwitterClient
 	end
 
 	def search(query)
-		@client.search(query, result_type: "recent").take(20)
+		@client.search(query, result_type: "recent").take(25)
 	end
 end

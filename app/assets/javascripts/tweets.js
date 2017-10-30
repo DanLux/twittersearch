@@ -5,6 +5,7 @@ function search() {
     	$.ajax({
     		type:'GET',
     		url: "/tweets/" + encodeURIComponent(query),
+    		dataType: "script",
     		success: function() {}
     	});
     }
