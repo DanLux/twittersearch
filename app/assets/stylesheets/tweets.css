@@ -1,2 +1,122 @@
-// Place all the styles related to the Tweets controller here.
-// They will automatically be included in application.css.
+body {
+  font-family: Helvetica, sans-serif;
+  background: #F0F0F0;
+}
+
+.search {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 600px) {
+  .search {
+    width: 25%;
+  }
+}
+
+.search__query {
+  float: left;
+  width: 100%;
+  border: 3px solid #1DA1F2;
+  padding: 5px;
+  height: 32px;
+  border-radius: 5px;
+  font-size: 17px;
+  outline: none;
+  color: #AFAF9F;
+}
+
+.search__query:focus{
+  color: #1DA1F2;
+}
+
+.search__button {
+  position: absolute;
+  right: -15px;
+  width: 40px;
+  height: 48px;
+  border: 1px solid #1DA1F2;
+  background: #1DA1F2;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 36px;
+}
+
+.search__button:hover {
+  background: #1A89BE;
+}
+
+.search__button:active {
+  background: #1069A4;
+  transform: scale(1.1);
+}
+
+
+.tweets {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 600px) {
+  .tweets {
+    width: 35%;
+  }
+}
+
+.tweets__title {
+  color:#0AF;
+  margin:25px;
+  font-size:30px;
+  text-align:center;
+}
+
+.tweets__list {
+  background:#FFF;
+  padding:0;
+  list-style: none;
+  border: 3px solid #1DA1F2;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.tweet {
+  padding:16px;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:16px;
+  color:#686868;
+
+  -webkit-transition:all 0.3s linear;
+  -moz-transition:all 0.3s linear;
+  -o-transition:all 0.3s linear;
+  transition:all 0.3s linear;
+}
+
+.tweet:hover {
+  background:#efefef;
+  color:#1069A4;
+}
+
+.tweet:first-child:hover {
+  -webkit-border-radius: 8px 8px 0 0;
+  -moz-border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.tweet:last-child:hover {
+  -webkit-border-radius: 0 0 8px 8px;
+  -moz-border-radius: 0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
+}
+
+.tweet__message {
+  position: relative;
+  bottom: 7px;
+  padding: 10px;
+}
