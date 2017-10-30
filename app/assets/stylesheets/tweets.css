@@ -7,7 +7,8 @@ body {
   position: absolute;
   top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 @media (min-width: 600px) {
@@ -56,13 +57,15 @@ body {
 
 .search__button:active {
   background: #1069A4;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .search__button:disabled {
   background: #AFAF9F;
   border: 1px solid #AFAF9F;
-  transform: none;
+  -webkit-transform: none;
+          transform: none;
 }
 
 
@@ -70,7 +73,8 @@ body {
   position: absolute;
   top: 15%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   margin-bottom: 50px;
 }
 
@@ -92,8 +96,6 @@ body {
   padding:0;
   list-style: none;
   border: 3px solid #1DA1F2;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
   border-radius: 8px;
 }
 
@@ -105,8 +107,6 @@ body {
   color:#606060;
 
   -webkit-transition:all 0.3s linear;
-  -moz-transition:all 0.3s linear;
-  -o-transition:all 0.3s linear;
   transition:all 0.3s linear;
 }
 
@@ -116,14 +116,10 @@ body {
 }
 
 .tweet:first-child:hover {
-  -webkit-border-radius: 8px 8px 0 0;
-  -moz-border-radius: 8px 8px 0 0;
   border-radius: 8px 8px 0 0;
 }
 
 .tweet:last-child:hover {
-  -webkit-border-radius: 0 0 8px 8px;
-  -moz-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
 }
 
