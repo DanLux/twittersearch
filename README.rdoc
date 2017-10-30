@@ -1,3 +1,0 @@
-== Twitter Search Application
-
-A single page application which uses Twitter API to search for the latest tweets related to a given query.
