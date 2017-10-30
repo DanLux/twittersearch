@@ -1,16 +1,19 @@
 
-function ajax_request(query="") {
+function ajax_request(query="", callback=function(){}) {
 	$.ajax({
 		type:'GET',
 		url: "/tweets/" + encodeURIComponent(query),
 		dataType: "script"
-	});
+	}).always(callback);
 }
 
 function search() {
 	let query = $.trim($("#search-query").val());
 	if (query) {
-		ajax_request(query);
+		$("#search").children().prop("disabled", true);
+		ajax_request(query, function() {
+			$("#search").children().prop("disabled", false);
+		});
 	}
 }
 

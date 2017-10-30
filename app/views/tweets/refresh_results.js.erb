@@ -1,1 +1,5 @@
-$("#dynamic_partial").html('<%= j render(:partial => "tweets", :locals => { :tweets => @tweets }) %>');
+let partial = $("#dynamic_partial");
+partial.fadeOut("fast", function() {
+	partial.html('<%= j render(:partial => "tweets", :locals => { :tweets => @tweets }) %>');
+	partial.fadeIn("fast");
+});

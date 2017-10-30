@@ -32,6 +32,11 @@ body {
   color: #1DA1F2;
 }
 
+.search__query:disabled {
+  color: #AFAF9F;
+  border: 3px solid #AFAF9F;
+}
+
 .search__button {
   position: absolute;
   right: -15px;
@@ -52,6 +57,12 @@ body {
 .search__button:active {
   background: #1069A4;
   transform: scale(1.1);
+}
+
+.search__button:disabled {
+  background: #AFAF9F;
+  border: 1px solid #AFAF9F;
+  transform: none;
 }
 
 
@@ -91,7 +102,7 @@ body {
   text-decoration:none;
   font-weight:bold;
   font-size:16px;
-  color:#686868;
+  color:#606060;
 
   -webkit-transition:all 0.3s linear;
   -moz-transition:all 0.3s linear;
